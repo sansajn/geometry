@@ -1,1 +1,5 @@
 Implmentuje geometricke algoritmy a štruktúry. 
+
+glmadapt.hpp : adaptuje štruktúry s knižnice glm (vec2, vec3) pre
+použitie s boost::geometry.
+
