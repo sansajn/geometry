@@ -1,3 +1,4 @@
+/*! Adaptuje štruktúry s knižnice glm pre použitie s boost::geometry. */
 #pragma once
 #include <boost/mpl/int.hpp>
 #include <boost/geometry/core/access.hpp>
