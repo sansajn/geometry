@@ -10,40 +10,7 @@
 
 namespace boost { namespace geometry { namespace traits {
 
-// adaptacia pre glm::vec3
-template <typename T, glm::precision P>
-struct tag<glm::detail::tvec3<T, P>>
-{
-	typedef point_tag type;
-};
-
-template <typename T, glm::precision P>
-struct coordinate_type<glm::detail::tvec3<T, P>>
-{
-	typedef typename glm::detail::tvec3<T, P>::value_type type;
-};
-
-template <typename T, glm::precision P>
-struct coordinate_system<glm::detail::tvec3<T, P>>
-{
-	typedef cs::cartesian type;
-};
-
-template <typename T, glm::precision P>
-struct dimension<glm::detail::tvec3<T, P>> : boost::mpl::int_<3>
-{};
-
-template <typename T, glm::precision P, std::size_t Dimension>
-struct access<glm::detail::tvec3<T, P>, Dimension>
-{
-	typedef glm::detail::tvec3<T, P> point_type;
-	typedef typename glm::detail::tvec3<T, P>::value_type value_type;
-
-	static value_type get(point_type const & p) {return p[Dimension];}
-	static void set(point_type & p, value_type const & v);
-};
-
-// adaptacia pre glm::vec2
+// glm::vec2 adaptation
 template <typename T, glm::precision P>
 struct tag<glm::detail::tvec2<T, P>>
 {
@@ -73,7 +40,40 @@ struct access<glm::detail::tvec2<T, P>, Dimension>
 	typedef typename glm::detail::tvec2<T, P>::value_type value_type;
 
 	static value_type get(point_type const & p) {return p[Dimension];}
-	static void set(point_type & p, value_type const & v);
+	static void set(point_type & p, value_type const & v) {p[Dimension] = v;}
+};
+
+// glm::vec3 adaptation
+template <typename T, glm::precision P>
+struct tag<glm::detail::tvec3<T, P>>
+{
+	typedef point_tag type;
+};
+
+template <typename T, glm::precision P>
+struct coordinate_type<glm::detail::tvec3<T, P>>
+{
+	typedef typename glm::detail::tvec3<T, P>::value_type type;
+};
+
+template <typename T, glm::precision P>
+struct coordinate_system<glm::detail::tvec3<T, P>>
+{
+	typedef cs::cartesian type;
+};
+
+template <typename T, glm::precision P>
+struct dimension<glm::detail::tvec3<T, P>> : boost::mpl::int_<3>
+{};
+
+template <typename T, glm::precision P, std::size_t Dimension>
+struct access<glm::detail::tvec3<T, P>, Dimension>
+{
+	typedef glm::detail::tvec3<T, P> point_type;
+	typedef typename glm::detail::tvec3<T, P>::value_type value_type;
+
+	static value_type get(point_type const & p) {return p[Dimension];}
+	static void set(point_type & p, value_type const & v) {p[Dimension] = v;}
 };
 
 }}}  // geometry, boost, traits
