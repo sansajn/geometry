@@ -3,9 +3,10 @@
 #include <boost/geometry/geometry.hpp>
 #include "box2.hpp"
 
-using boost::geometry::make;
-using boost::geometry::make_inverse;
-using boost::geometry::expand;
+using geom::box2;
+using geom::make;
+using geom::make_inverse;
+using geom::expand;
 
 int main(int argc, char * argv[])
 {

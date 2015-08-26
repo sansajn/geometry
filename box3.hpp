@@ -3,5 +3,26 @@
 #include <glm/vec3.hpp>
 #include "glmadapt.hpp"
 
+namespace geom {
+
+using namespace boost::geometry;
+
 //! @ingroup math
-typedef boost::geometry::model::box<glm::vec3> box3;
+using box3 = boost::geometry::model::box<glm::vec3>;
+
+inline float width(box3 const & b)
+{
+	return get<max_corner, 0>(b) - get<min_corner, 0>(b);
+}
+
+inline float height(box3 const & b)
+{
+	return get<max_corner, 1>(b) - get<min_corner, 1>(b);
+}
+
+inline float depth(box3 const & b)
+{
+	return get<max_corner, 2>(b) - get<min_corner, 2>(b);
+}
+
+}  // geom

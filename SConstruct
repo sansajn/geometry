@@ -3,4 +3,4 @@ env = Environment(
 	CPPPATH=['.'],
 	CPPDEFINES=['GLM_FORCE_RADIANS'])
 
-env.Program(['test_adapt.cpp'])
+env.Program(['test_expand.cpp'])
