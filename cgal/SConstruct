@@ -1,0 +1,9 @@
+env = Environment(
+	CXXFLAGS=['-std=c++11'],
+	LIBS=['CGAL', 'boost_thread', 'gmp', 'mpfr'])
+
+#env.ParseConfig('pkg-config --cflags --libs ')
+
+env.Program(['mesh_an_implicit_function.cpp'])
+env.Program(['points_and_segment.cpp'])
+env.Program(['tds.cpp'])
