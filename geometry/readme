@@ -1,5 +1,12 @@
 Implmentuje geometricke algoritmy štruktúry a pomocné funkcie. 
 
+## inštalácia
+
+pod ubuntu 18.04
+
+libglm-dev (0.9.9)
+
+
 glmadapt.hpp : adaptuje štruktúry s knižnice glm (vec2, vec3) pre
 použitie s boost::geometry.
 
