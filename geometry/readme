@@ -7,6 +7,13 @@ pod ubuntu 18.04
 libglm-dev (0.9.9)
 
 
+
+
+geometrické primitívy ?
+
+point, line, ... ?
+
+
 glmadapt.hpp : adaptuje štruktúry s knižnice glm (vec2, vec3) pre
 použitie s boost::geometry.
 
@@ -42,4 +49,5 @@ utility.hpp : funkcie pracujúce s rotáciou
 	}
 
 --- koniec ukážky].
+
 
