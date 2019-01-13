@@ -1,6 +1,8 @@
+# geometry
 Implmentuje geometricke algoritmy štruktúry a pomocné funkcie. 
 
-## inštalácia
+
+# geometry:inštalácia
 
 pod ubuntu 18.04
 
@@ -13,24 +15,24 @@ geometrické primitívy ?
 
 point, line, ... ?
 
+# geometry:štruktúra
 
-boost_geometry_adapt.hpp : adaptuje štruktúry s knižnice glm (vec2, vec3) pre
-použitie s boost::geometry.
+**boost_geometry_adapt.hpp** : Algoritmi s knižnice `boost::geometry`.
 
-box2.hpp : implementácia modelu dvojrozmernej krabice (obdĺžnik).
+**box2.hpp** : Implementácia modelu obdlžníka.
 
-box3.hpp : implementácia modelu trojrozmernej krabice (kváder).
+**box3.hpp** : Implementácia modelu kvádra.
 
-utility.hpp : funkcie pracujúce s rotáciou
+**utility.hpp** : Funkcie pracujúce s rotáciou.
 
-glmprint.hpp : formátovaný výstup
+**glmprint.hpp** : Formátovaný výstup.
 
 ```c++
 mat4 M{1};
 cout << with_label("M", M);
 ```
 
-# ukážky
+# geometry:ukážky
 
 ```c++
 // expand algorithm test
