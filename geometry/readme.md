@@ -2,7 +2,7 @@
 Implmentuje geometricke algoritmy štruktúry a pomocné funkcie. 
 
 
-# geometry:inštalácia
+## geometry:inštalácia
 
 pod ubuntu 18.04
 
@@ -15,7 +15,7 @@ geometrické primitívy ?
 
 point, line, ... ?
 
-# geometry:štruktúra
+## geometry:štruktúra
 
 **boost_geometry_adapt.hpp** : Algoritmi s knižnice `boost::geometry`.
 
@@ -32,7 +32,7 @@ mat4 M{1};
 cout << with_label("M", M);
 ```
 
-# geometry:ukážky
+## geometry:ukážky
 
 ```c++
 // expand algorithm test
