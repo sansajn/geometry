@@ -1,21 +1,4 @@
-# projekt geometry
+Geometry stuff for OpenGL programming.
 
-...
-
-
-# knižnica geometry
-
-## geometry:struktúra
-
-	box2
-	box3
-	utility
-
-## geometry:ukážky
-
-
-
-# knižnica cgal
-
-
+see `geometry` and `cgal` directories.
 
