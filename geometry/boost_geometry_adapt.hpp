@@ -11,21 +11,18 @@ Supported GLM versions are 0.9.9.8 (Ubuntu 24.04 LTS), 0.9.9.0 and 0.9.6.3. */
 #include <boost/geometry/core/coordinate_dimension.hpp>
 #include <glm/detail/setup.hpp>
 
-// for Ubuntu 24.04 LTS
-#if GLM_VERSION >= 998
+#if GLM_VERSION >= 998  // for Ubuntu 24.04 LTS
 	#include <glm/detail/type_vec1.hpp>
 	#include <glm/detail/type_vec2.hpp>
 	#include <glm/detail/type_vec3.hpp>
-
-// for Ubuntu 18.04 LTS
-#elif GLM_VERSION >= 990
+#elif GLM_VERSION >= 990  // for Ubuntu 18.04 LTS
 	#include <glm/detail/type_vec.hpp>
 #else  // for glm 0.9.6.3
 	#include <glm/vec2.hpp>
 	#include <glm/vec3.hpp>
 #endif
 
-#if GLM_VERSION >= 998
+#if GLM_VERSION >= 990
 
 namespace boost::geometry::traits {
 
