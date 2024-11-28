@@ -1,7 +1,7 @@
 /*! \file
-Adapts glm vector types (vec1, vec2 and vec3) for boost::geometry.
+Adapts GLM vector types (vec1, vec2 and vec3) for Boost.Geometry.
 
-Supported glm versions are 0.9.9.8 (Ubuntu 24.04 LTS), 0.9.9.0 and 0.9.6.3. */
+Supported GLM versions are 0.9.9.8 (Ubuntu 24.04 LTS), 0.9.9.0 and 0.9.6.3. */
 #pragma once
 #include <boost/mpl/int.hpp>
 #include <boost/geometry/core/access.hpp>
