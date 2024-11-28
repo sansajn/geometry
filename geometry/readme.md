@@ -1,5 +1,13 @@
 # geometry
-Implmentuje geometricke algoritmy štruktúry a pomocné funkcie.
+Boost.Geometry adaption for vector types (vec2, vec3 and vec4) from GLM library.
+
+Thanks to Boost.Geometry we can construct geometric objects from vector types and use geometry algorithms e.g.
+
+```cpp
+vec2 pt = {1,1};
+box2 b2 = {vec2{0,0}, vec2{1,1};
+boost::geometry::intersects(pt, b2);  //= true
+```
 
 > TODO: What we have there? How to use stafff we have there?
 
@@ -11,7 +19,7 @@ Implmentuje geometricke algoritmy štruktúry a pomocné funkcie.
 
 > TODO: I rememer that I've renamed this to `glm_adapt.hpp`, but
 
-## geometry:inštalácia
+## install
 
 Nainštaluj nasledujúce balíčky
 
