@@ -1,6 +1,15 @@
 # geometry
 Implmentuje geometricke algoritmy štruktúry a pomocné funkcie.
 
+> TODO: What we have there? How to use stafff we have there?
+
+- `utility.hpp`
+- `box2.hpp`
+- `box3.hpp`
+- `glmprint.hpp`
+- `boost_geometry_adapt.hpp`
+
+> TODO: I rememer that I've renamed this to `glm_adapt.hpp`, but
 
 ## geometry:inštalácia
 

@@ -1,4 +1,7 @@
-/*! Adaptuje štruktúry s knižnice glm (0.9.6.3, 0.9.9.0) pre použitie s boost::geometry. */
+/*! \file
+Adapts glm vector types (vec1, vec2 and vec3) for boost::geometry.
+
+Supported glm versions are 0.9.9.8 (Ubuntu 24.04 LTS), 0.9.9.0 and 0.9.6.3. */
 #pragma once
 #include <boost/mpl/int.hpp>
 #include <boost/geometry/core/access.hpp>
@@ -8,16 +11,23 @@
 #include <boost/geometry/core/coordinate_dimension.hpp>
 #include <glm/detail/setup.hpp>
 
-#if GLM_VERSION >= 990
+// for Ubuntu 24.04 LTS
+#if GLM_VERSION >= 998
+	#include <glm/detail/type_vec1.hpp>
+	#include <glm/detail/type_vec2.hpp>
+	#include <glm/detail/type_vec3.hpp>
+
+// for Ubuntu 18.04 LTS
+#elif GLM_VERSION >= 990
 	#include <glm/detail/type_vec.hpp>
-#else
+#else  // for glm 0.9.6.3
 	#include <glm/vec2.hpp>
 	#include <glm/vec3.hpp>
 #endif
 
-#if GLM_VERSION >= 990
+#if GLM_VERSION >= 998
 
-namespace boost { namespace geometry { namespace traits {
+namespace boost::geometry::traits {
 
 // glm::vec adaptation
 template <glm::length_t L, typename T, glm::qualifier Q>
@@ -52,7 +62,7 @@ struct access<glm::vec<L, T, Q>, Dimension>
 	static void set(point_type & p, value_type const & v) {p[Dimension] = v;}
 };
 
-}}}  // geometry, boost, traits
+}  // boost::geometry::traits
 
 #else  // glm 0.9.6.3
 
