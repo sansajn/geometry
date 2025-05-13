@@ -1,7 +1,7 @@
-# geometry
+# Geometry
 Implmentuje geometricke algoritmy štruktúry a pomocné funkcie.
 
-> TODO: What we have there? How to use stafff we have there?
+> TODO: What we have there? How to use staff we have there?
 
 - `utility.hpp`
 - `box2.hpp`
@@ -22,15 +22,41 @@ príkazom `$ sudo apt install libglm-dev`
 
 ## geometry:štruktúra
 
-**box2.hpp** : implementácia modelu obdlžníka
+**box2.hpp** : Implement rectangle (two dimensional box) model.
 
 ```c++
-box2 b = make_inverse<box2>();
+box2 b = make_inverse<box2>();  // TODO: what does this does?
 expand(b, vec2{3,3});
 expand(b, vec2{5,5});
 box2 c = make<box2>(3,3, 5,5);
 // b == c
 ```
+
+To create box2 we can
+```cpp
+using boost::geometry::make;
+
+box2 b;  // default constructed
+box2 c{vec2{0,0}, vec2{1,1}};  // via constructor
+box2 d = make<box2>(0,0, 1,1);  // via make function
+```
+
+> TODO: How to get width/height?
+> TODO: How to get SW (min corner)?
+> TODO: How to work with box2?
+
+To access box corner points and width or height we can use `get`, `width` and `height` functions
+
+```cpp
+#include <boost/geometry/core/access.hpp>
+namespace bg = boost::geometry;
+
+box2 d = make<box2>(0,0, 1,1);
+
+vec2 min_point = b.min_corner(),  // access corner points
+	max_point = b.max_corner();
+```
+
 
 **box3.hpp** : implementácia modelu kvádra
 
@@ -70,8 +96,7 @@ using geom::make;
 using geom::make_inverse;
 using geom::expand;
 
-int main(int argc, char * argv[])
-{
+int main(int argc, char * argv[]) {
 	box2 b = make_inverse<box2>();
 	expand(b, glm::vec2{0,0});
 	expand(b, glm::vec2{1,2});
