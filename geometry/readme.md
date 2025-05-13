@@ -9,6 +9,8 @@ box2 b2 = {vec2{0,0}, vec2{1,1};
 boost::geometry::intersects(pt, b2);  //= true
 ```
 
+to check for an inersection.
+
 > TODO: What we have there? How to use stafff we have there?
 
 - `utility.hpp`
